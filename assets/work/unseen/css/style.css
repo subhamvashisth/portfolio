@@ -1,0 +1,605 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loading{
+    height: 100vh;
+    width: 100%;
+    color: #424242;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+
+    animation: loader 1s  8s linear forwards 1;
+}
+
+@keyframes loader {
+
+    from{
+        top: 0%;
+    }
+
+    to{
+        top: -110%;
+    }
+    
+}
+
+.loading > .loader-inner{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 200px auto;
+    position: relative;
+}
+
+.loading > .loader-inner >.one::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -20%;
+    
+    animation-name: u;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes u{
+    0%{
+        content: '';
+        top: 10%;
+        left: -10%;
+    }
+
+    100%{
+        content: 'U';
+        top: 10%;
+        left: 30%;
+    }
+}
+
+
+.loading > .loader-inner >.two::before{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 40%;
+    
+    animation-name: n;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes n{
+    0%{
+        content: '';
+        bottom: -10%;
+        left: 40%;
+    }
+
+    100%{
+        content: 'N';
+        bottom: 100%;
+        left: 40%;
+    }
+}
+
+.loading > .loader-inner >.three::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    
+    animation-name: s;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes s{
+    0%{
+        content: '';
+        top: 10%;
+        right: 0%;
+    }
+
+    100%{
+        content: 'S';
+        top: 0%;
+        right: 100%;
+    }
+}
+
+.loading > .loader-inner >.four::before{
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 40%;
+    
+    animation-name: e;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes e{
+    0%{
+        content: '';
+        top: -80%;
+        left: 40%;
+    }
+
+    100%{
+        content: 'E';
+        top: 10%;
+        left: 40%;
+    }
+}
+
+.loading > .loader-inner >.five::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -40%;
+    
+    animation-name: ee;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes ee{
+    0%{
+        content: '';
+        top: 10%;
+        left: -40%;
+    }
+    
+    100%{
+        content: 'E';
+        top: 10%;
+        left: 40%;
+       }
+}
+
+
+.loading > .loader-inner >.six::before{
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 40%;
+    
+    animation-name: nn;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes nn{
+    0%{
+        content: '';
+        bottom: -10%;
+        left: 40%;
+    }
+
+    100%{
+        content: 'N';
+        bottom: 100%;
+        left: 40%;
+    }
+}
+
+.back{
+    min-height: 100vh;
+    width: 100%;
+    background-color: grey;
+}
+
+.back > .marg{
+    min-height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.back > .marg > .box{
+    height:200px;
+    max-width:400px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    margin-left: 50px; 
+}
+
+
+.back > .marg > .box >.eye-one{
+    height: 101px;
+    width: 60px;
+    position: relative;
+    top: 68px;
+    left: 153px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    transform: perspective(800px) rotate(15deg);
+}
+
+.eye-one::before{
+    content:'';
+    height: 30px;
+    width: 53px;
+    position: absolute;
+    top:30px;
+    left:2px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.eye-one::after{
+        content: '';
+        height: 33px;
+        width: 24px;
+        position: absolute;
+        top: 30px;
+        left: 17px;
+        border-radius: 50%;
+        background-color: black;
+}
+
+
+.one-w {
+    height: 15px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 38px;
+    left: 30px;
+    z-index: 1;
+}
+
+.back > .marg > .box >.eye-two{
+    height: 124px;
+    width: 81px;
+    position: relative;
+    top: -33px;
+    left: 202px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid black;
+    transform: perspective(800px) rotate(18deg);
+}
+
+.eye-two::before{
+    content: '';
+    height: 30px;
+    width: 78px;
+    overflow: hidden;
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.eye-two::after{
+    content: '';
+    height: 34px;
+    width: 25px;
+    position: absolute;
+    top: 48px;
+    left: 29px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.two-w {
+    height: 18px;
+    width: 17px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 56px;
+    left: 42px;
+    z-index: 1;
+}
+.back > .marg > .marg-inner{
+    height:200px;
+    width:100%;
+    color:#424242;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+}
+
+.back > .marg > .marg-inner >span{
+    
+    font-size: 18px;
+    font-family: arial;
+    font-weight: 500;
+    
+}
+
+.back > .marg > .marg-inner >p{
+    
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 500;    
+}
+
+
+#bt{
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#bt:hover{
+     background-color: black;
+     color: white;
+}
+
+.back > .marg > .last{
+    height:20px;
+    width:100%;
+    margin-top:100px;
+}
+
+.last > a{
+    color:#424242;
+    font-size:12px;
+    font-family: sans-serif;
+    font-weight: 500px;
+}
+
+
+
+    /* -- Inner html start from here -- */
+
+
+
+.video{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.video >video{
+    width: 100%;
+}
+
+.head{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+}
+
+.left-head{
+    height:100%;
+    max-width: 20%;
+    margin-left:30px;
+}
+
+.left-head >a{
+    text-decoration: none;
+    color: black;
+    font-size:25px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.right-head{
+    height: 100%;
+    max-width: 30%;
+    margin-right: 30px;
+}
+
+.right-head > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+} 
+
+.right-head > ul >li{
+    list-style: none;
+    
+}
+
+.right-head > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.right-head > ul >li:first-child{
+        transition: all 0.3s;
+}
+
+.right-head > ul >li:first-child:hover{
+         padding: 6px 15px;
+         border: 1px solid black;
+         border-radius: 60px;  
+         font-style: italic;
+         font-weight: 300;      
+}
+
+.right-head > ul >li:nth-child(2){
+        transition: all 0.3s;
+}
+
+.right-head > ul > li:nth-child(2):hover{
+         padding: 6px 15px;
+         border: 1px solid black;
+         border-radius: 60px;  
+         font-style: italic;
+         font-weight: 300;       
+}
+
+.right-head > ul >li:nth-child(3){
+         transition: all 0.3s;
+}
+
+.right-head > ul > li:nth-child(3):hover{
+        padding: 6px 15px;
+        border: 2px solid black;
+        border-radius: 60px;
+        font-style: italic;
+        font-weight: 300;         
+}
+
+.right-head > ul >li:nth-child(4){
+    background-color: white;
+    padding: 5px 9px;
+    transition: all 0.3s;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.right-head > ul > li:nth-child(4):hover{
+     
+     transform: rotatex(180deg);        
+}
+
+.center-part{
+    height:50%;
+    width:100%;
+    position: absolute;
+    top: calc(50% - 25%);
+}
+
+.center-inner{
+    height:300px;
+    width:400px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.center-inner> h2{
+    font-size:14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-bottom:10px;
+}
+
+.center-inner> h1 > span{
+    font-size:40px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: perspective(100px) rotate(60deg);
+}
+
+.center-inner> h1{
+    font-size:40px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:30px;
+}
+
+.center-inner > a{
+    padding:8px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.center-inner > a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+.bottom-part{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.left-bottom > a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid white;
+    padding:6px 30px;
+    border-radius: 60px;
+    transition: all 0.3s;
+}
+
+.left-bottom > a:hover{
+    color: white;
+    border: 2px solid black;
+}
+
+.center-bottom{
+    position: relative;
+}
+
+.center-bottom > pre{
+    font-size: 15px;
+    position: absolute;
+    top:-9px;
+    left:-55px;
+    font-weight: 600;
+    color: black;
+    z-index: 1
+}
+
+.center-bottom > a >i{
+    padding: 7px 10px;
+    background-color:white;
+    border-radius: 50%;
+    color: black;
+    transition:all 0.3s;
+    position: absolute;
+    margin-top: -17px;
+    z-index: 2;
+}
+
+.center-bottom> a > i:hover{
+      color: white;
+      background-color: black;
+}
+
+.right-bottom {
+    margin-right: 30px;
+    font-size: 20px;
+
+}
+
+
